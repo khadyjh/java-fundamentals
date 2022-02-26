@@ -25,17 +25,20 @@ class LibraryTest {
     void rollTest(){
         Library underTest=new Library();
         int[] result=underTest.roll(4);
-        int lingth1=result.length;
         boolean rel=false;
-        assertEquals(4,lingth1);
+        assertEquals(4,result.length);
+
         int[] exp={1,2,3,4,5,6};
         for (int index = 0; index < result.length; index++) {
-            if(result[index]==1 && result[index]==2 && result[index]==3 && result[index]==4
-            &&result[index]==5 && result[index]==6){
-               rel=true;
+            for (int index1 = 0; index1 < exp.length; index1++) {
+                if(result[index]==exp[index1])
+                {
+                    rel=true;
+                }
             }
+
         }
-        assertEquals(true,true);
+        assertEquals(true,rel);
     }
 
     @Test
