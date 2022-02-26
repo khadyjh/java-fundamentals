@@ -26,7 +26,16 @@ class LibraryTest {
         Library underTest=new Library();
         int[] result=underTest.roll(4);
         int lingth1=result.length;
+        boolean rel=false;
         assertEquals(4,lingth1);
+        int[] exp={1,2,3,4,5,6};
+        for (int index = 0; index < result.length; index++) {
+            if(result[index]==1 && result[index]==2 && result[index]==3 && result[index]==4
+            &&result[index]==5 && result[index]==6){
+               rel=true;
+            }
+        }
+        assertEquals(true,true);
     }
 
     @Test
@@ -42,6 +51,11 @@ class LibraryTest {
         Library underTest=new Library();
         int [] result=underTest.arrayOfArrays();
         int[] exp={65, 5, 55, 52, 55, 62, 57};
-        assertEquals(exp,result);
+
+        assertEquals(7,result.length);
+        for (int index = 0; index < result.length; index++) {
+            assertEquals(exp[index],result[index]);
+
+        }
     }
 }

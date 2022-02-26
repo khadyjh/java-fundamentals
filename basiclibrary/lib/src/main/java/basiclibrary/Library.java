@@ -20,6 +20,7 @@ public class Library {
         System.out.println(result);
 
         int[] num2={1,5,3,5,6};
+
         System.out.println(calculatingAverages(num2));
 //
         System.out.println(arrayOfArrays());
