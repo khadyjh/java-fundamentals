@@ -4,6 +4,11 @@
 package basiclibrary;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -60,5 +65,40 @@ class LibraryTest {
             assertEquals(exp[index],result[index]);
 
         }
+    }
+
+    @Test
+    void weatherDataTest(){
+        Library underTest=new Library();
+        HashSet<String> result=new HashSet<>();
+        HashSet<String>exp=new HashSet<>();
+        result.add("the min number 51" );
+        result.add("the max number 72" );
+        result.add("Never saw temperature: 63");
+        result.add("Never saw temperature: 67");
+        result.add("Never saw temperature: 68");
+        result.add("Never saw temperature: 69");
+        exp=underTest.weatherData();
+        assertEquals(exp,result);
+
+    }
+
+    @Test
+    void tally(){
+        Library underTest= new Library();
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+        String result=underTest.tally(votes);
+        String exp="Bush is the winner";
+        assertEquals(exp,result);
+
     }
 }
