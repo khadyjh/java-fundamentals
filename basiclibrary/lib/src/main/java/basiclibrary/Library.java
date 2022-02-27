@@ -23,7 +23,7 @@ public class Library {
 ////
 //        System.out.println(arrayOfArrays());
 
-//        weatherData();
+        weatherData();
 
         List<String> votes = new ArrayList<>();
         votes.add("Bush");
@@ -37,7 +37,7 @@ public class Library {
         votes.add("Bush");
 
 
-        tally(votes);
+//        tally(votes);
 
 
     }
@@ -114,7 +114,7 @@ public class Library {
 
 ////////////////////////////////////////////lab3/////////////////////////////////////////
 
-    public static void weatherData(){
+    public static HashSet weatherData(){
         int[][] weeklyMonthTemperatures = {
                 {66, 64, 58, 65, 71, 57, 60},
                 {57, 65, 65, 70, 72, 65, 51},
@@ -123,6 +123,7 @@ public class Library {
         };
         HashSet<Integer> weather=new HashSet<>();
 
+        HashSet<String> result=new HashSet<>();
 
         for (int[] temp:
             weeklyMonthTemperatures ) {
@@ -149,6 +150,8 @@ public class Library {
 
         }
 
+        result.add("the min number " + min);
+        result.add("the max number " + max);
         System.out.println(min+" the min number");
         System.out.println(max+" the max number");
 
@@ -157,14 +160,15 @@ public class Library {
         while (num<max){
             if(!weather.contains(num)){
                 System.out.println("Never saw temperature: " +num);
+                result.add("Never saw temperature: " +num);
             }
             num++;
         }
 
 
+        System.out.println(result);
 
-
-
+        return result;
 
     }
 
@@ -174,19 +178,39 @@ public class Library {
             System.out.println(votes.get(index));
 
         }
-        Map<String,Integer> vot=new HashMap<>();
+        Map<Integer,String> vot=new HashMap<>();
+        int count=0;
+        int winnerVot=0;
+
         for (int index = 0; index < votes.size(); index++) {
 
                String val=votes.get(index);
-               int count=1;
-            vot.put(votes.get(index),vot.containsValue(val)? count+1:count);
+
+//            vot.put(votes.get(index),vot.containsValue(val)? count+1:count);
+            for (int index2 = 0; index2 < votes.size(); index2++) {
+
+                if(votes.get(index2)==val){
+                    count++;
+                }
+
+            }
+            vot.put(count,val);
+
+            if(count>winnerVot){
+                winnerVot=count;
+            }
+            count=0;
         }
 
 
-//        System.out.println(vot);
+        String result=vot.get(winnerVot)+ " is the winner";
 
+//        System.out.println(vot.get(winnerVot)+"//////////////");
+        System.out.println(result);
         System.out.println(vot);
-
-        return "";
+        return result;
     }
+
+
+
 }
