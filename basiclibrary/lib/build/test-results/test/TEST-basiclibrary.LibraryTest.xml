@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="basiclibrary.LibraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-27T19:09:02" hostname="DESKTOP-21OFTVH" time="0.023">
+  <properties/>
+  <testcase name="tally()" classname="basiclibrary.LibraryTest" time="0.023"/>
+  <system-out><![CDATA[Bush
+Bush
+Bush
+Shrub
+Hedge
+Shrub
+Bush
+Hedge
+Bush
+Bush is the winner
+{2=Hedge, 5=Bush}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
