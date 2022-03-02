@@ -4,6 +4,9 @@
 package linter;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -14,7 +17,38 @@ class AppTest {
     @Test
     void readTest(){
         App underTest=new App();
-        underTest.read();
+         ArrayList<String> result= underTest.read("gates.js");
+         ArrayList<String>exp=new ArrayList<>();
+          exp.add(" Missing semicolon in line => 3");
+          exp.add(" Missing semicolon in line => 5");
+
+          assertEquals(exp,result);
+
 
     }
+
+    @Test
+    void emptyReadTest(){
+        App underTest=new App();
+        ArrayList<String> result= underTest.read("gatesEmpty.js");
+        ArrayList<String>exp=new ArrayList<>();
+
+
+        assertEquals(exp,result);
+
+
+    }
+
+    @Test
+    void readTestNoError(){
+        App underTest=new App();
+        ArrayList<String> result= underTest.read("gatesNo.js");
+        ArrayList<String>exp=new ArrayList<>();
+
+
+        assertEquals(exp,result);
+
+
+    }
+
 }
