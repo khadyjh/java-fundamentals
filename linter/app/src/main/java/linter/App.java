@@ -6,6 +6,7 @@ package linter;
 import java.io.*;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -17,11 +18,9 @@ public class App {
 
     public static void main(String[] args) {
 
-//        System.out.println(new App().getGreeting());
-
-        Reader();
+//        Reader();
         System.out.println("////////////////////////////////////////////");
-        read();
+        read("gates.js");
 
 
     }
@@ -73,10 +72,12 @@ public class App {
         System.out.println(file1.size());
     }
 
-    public static void read() {
+    public static ArrayList read(String fileName) {
        int counter=1;
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-        InputStream is = classloader.getResourceAsStream("gates.js");
+        InputStream is = classloader.getResourceAsStream(fileName);
+
+        ArrayList<String> result=new ArrayList<>();
 
         try (Scanner scanner=new Scanner(is)){
 
@@ -86,7 +87,8 @@ public class App {
                         && str.lastIndexOf("}")==-1
                         && str.indexOf("if")==-1&&str.indexOf("else")==-1 )
                 {
-                    System.out.println(" Missing semicolon in line => " + counter);
+//                    System.out.println(" Missing semicolon in line => " + counter);
+                    result.add(" Missing semicolon in line => " + counter);
 
                 }
                 counter++;
@@ -95,6 +97,10 @@ public class App {
         }catch (Exception e){
             System.err.println(e.getMessage());
         }
+
+        System.out.println(result);
+
+        return result;
 
     }
 
