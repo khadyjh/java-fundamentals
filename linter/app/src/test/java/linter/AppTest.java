@@ -3,6 +3,7 @@
  */
 package linter;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -10,11 +11,36 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-    }
+
     @Test
+    @DisplayName("no Error ")
+    void testNoError(){
+        App underTest=new App();
+        ArrayList<String> result= underTest.read("gatesNo.js");
+        ArrayList<String>exp=new ArrayList<>();
+
+
+        assertEquals(exp,result);
+
+
+    }
+
+    @Test
+    @DisplayName("one Error ")
+    void testOneError(){
+        App underTest=new App();
+        ArrayList<String> result= underTest.read("gatesOneError.js");
+        ArrayList<String>exp=new ArrayList<>();
+        exp.add(" Missing semicolon in line => 5");
+
+
+        assertEquals(exp,result);
+
+
+    }
+
+    @Test
+    @DisplayName("contains few errors.")
     void readTest(){
         App underTest=new App();
          ArrayList<String> result= underTest.read("gates.js");
@@ -28,6 +54,27 @@ class AppTest {
     }
 
     @Test
+    @DisplayName("many Error ")
+    void testManyError(){
+        App underTest=new App();
+        ArrayList<String> result= underTest.read("gatesManyErrors.js");
+        ArrayList<String>exp=new ArrayList<>();
+        exp.add(" Missing semicolon in line => 3");
+        exp.add(" Missing semicolon in line => 5");
+        exp.add(" Missing semicolon in line => 11");
+        exp.add(" Missing semicolon in line => 13");
+        exp.add(" Missing semicolon in line => 15");
+        exp.add(" Missing semicolon in line => 26");
+        exp.add(" Missing semicolon in line => 28");
+
+
+
+        assertEquals(exp,result);
+
+    }
+
+    @Test
+    @DisplayName("empty file.")
     void emptyReadTest(){
         App underTest=new App();
         ArrayList<String> result= underTest.read("gatesEmpty.js");
@@ -39,16 +86,11 @@ class AppTest {
 
     }
 
-    @Test
-    void readTestNoError(){
-        App underTest=new App();
-        ArrayList<String> result= underTest.read("gatesNo.js");
-        ArrayList<String>exp=new ArrayList<>();
 
 
-        assertEquals(exp,result);
 
 
-    }
+
+
 
 }
