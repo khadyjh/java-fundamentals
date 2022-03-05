@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06cf9de1-b198-407a-ad4d-0dc60f8e3219" name="Changes" comment="lab3">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/gates.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/gates.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/linter/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/linter/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/resources/gates.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/gates.js" afterDir="false" />
-    </list>
+    <list default="true" id="06cf9de1-b198-407a-ad4d-0dc60f8e3219" name="Changes" comment="lab3 / 3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645978943481</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lab3 / 3">
+      <created>1646509889821</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646509889821</updated>
+    </task>
+    <task id="LOCAL-00003" summary="lab3 / 3">
+      <created>1646510060269</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1646510060269</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +222,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lab3" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab3" />
+    <MESSAGE value="lab3 / 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab3 / 3" />
   </component>
 </project>
