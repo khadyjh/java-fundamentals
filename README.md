@@ -7,3 +7,7 @@
 | lab2 | [Link](basiclibrary) |
 | lab3 | [Link](linter)       |
 
+| lab6 | [Link](inheritance)  |
+
+
+
