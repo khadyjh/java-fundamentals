@@ -23,7 +23,7 @@ public class Library {
 ////
 //        System.out.println(arrayOfArrays());
 
-        weatherData();
+//        weatherData();
 
         List<String> votes = new ArrayList<>();
         votes.add("Bush");
@@ -37,7 +37,7 @@ public class Library {
         votes.add("Bush");
 
 
-//        tally(votes);
+        tally(votes);
 
 
     }
@@ -114,7 +114,7 @@ public class Library {
 
 ////////////////////////////////////////////lab3/////////////////////////////////////////
 
-    public static HashSet weatherData(){
+    public static String weatherData(){
         int[][] weeklyMonthTemperatures = {
                 {66, 64, 58, 65, 71, 57, 60},
                 {57, 65, 65, 70, 72, 65, 51},
@@ -123,8 +123,9 @@ public class Library {
         };
         HashSet<Integer> weather=new HashSet<>();
 
-        HashSet<String> result=new HashSet<>();
+//        HashSet<String> result=new HashSet<>();
 
+        String result="";
         for (int[] temp:
             weeklyMonthTemperatures ) {
             for (int index = 0; index < temp.length; index++) {
@@ -150,17 +151,20 @@ public class Library {
 
         }
 
-        result.add("the min number " + min);
-        result.add("the max number " + max);
-        System.out.println(min+" the min number");
-        System.out.println(max+" the max number");
+//        result.add("the min number " + min);
+//        result.add("the max number " + max);
+        result=result+ "the min number "+min +'\n';
+        result=result+ "the min number "+max +'\n';
+//        System.out.println(min+" the min number");
+//        System.out.println(max+" the max number");
 
 
         int num=min;
         while (num<max){
             if(!weather.contains(num)){
-                System.out.println("Never saw temperature: " +num);
-                result.add("Never saw temperature: " +num);
+//                System.out.println("Never saw temperature: " +num);
+                result=result + "Never saw temperature: " + num +'\n';
+//                result.add("Never saw temperature: " +num);
             }
             num++;
         }
@@ -174,10 +178,6 @@ public class Library {
 
     public static String tally(List<String> votes){
 
-        for (int index = 0; index < votes.size(); index++) {
-            System.out.println(votes.get(index));
-
-        }
         Map<Integer,String> vot=new HashMap<>();
         int count=0;
         int winnerVot=0;
@@ -186,7 +186,6 @@ public class Library {
 
                String val=votes.get(index);
 
-//            vot.put(votes.get(index),vot.containsValue(val)? count+1:count);
             for (int index2 = 0; index2 < votes.size(); index2++) {
 
                 if(votes.get(index2)==val){
@@ -205,9 +204,7 @@ public class Library {
 
         String result=vot.get(winnerVot)+ " is the winner";
 
-//        System.out.println(vot.get(winnerVot)+"//////////////");
-        System.out.println(result);
-        System.out.println(vot);
+
         return result;
     }
 

@@ -70,15 +70,16 @@ class LibraryTest {
     @Test
     void weatherDataTest(){
         Library underTest=new Library();
-        HashSet<String> result=new HashSet<>();
-        HashSet<String>exp=new HashSet<>();
-        result.add("the min number 51" );
-        result.add("the max number 72" );
-        result.add("Never saw temperature: 63");
-        result.add("Never saw temperature: 67");
-        result.add("Never saw temperature: 68");
-        result.add("Never saw temperature: 69");
-        exp=underTest.weatherData();
+
+        String exp= "the min number 51\n" +
+                "the min number 72\n" +
+                "Never saw temperature: 63\n" +
+                "Never saw temperature: 67\n" +
+                "Never saw temperature: 68\n" +
+                "Never saw temperature: 69\n";
+
+        String result=underTest.weatherData();
+
         assertEquals(exp,result);
 
     }
