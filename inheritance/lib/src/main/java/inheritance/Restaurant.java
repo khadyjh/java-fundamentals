@@ -3,79 +3,83 @@ package inheritance;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Restaurant {
-    private String name;
-    private int stars;
+public class Restaurant extends BigOne{
     private String priceCategory;
-    private List<Review> reviewList;
+    private float stars;
+    private List<Review> restaurantReviewList;
+    private int priceCategoryInt;
 
+    public Restaurant(String name,int priceCategoryInt,float stars) {
+        super(name);
 
-    public void setStars(int stars) {
         if(stars>0 && stars<=5){
             this.stars = stars;
         }
+        if(priceCategoryInt>0 && priceCategoryInt<=3){
+            this.priceCategoryInt=priceCategoryInt;
+            this.priceCategory= super.calculatePriceCategory(priceCategoryInt);
+        }else {
+            this.priceCategory="enter num between 1-3";
+        }
+
+        restaurantReviewList=new ArrayList<>();
+
+
     }
 
-    public int getStars() {
+    public String getPriceCategory() {
+        return priceCategory;
+    }
+
+    public void setPriceCategory(String priceCategory) {
+        this.priceCategory=priceCategory;
+    }
+
+    public int getPriceCategoryInt() {
+        return priceCategoryInt;
+    }
+
+    public void setPriceCategoryInt(int priceCategoryInt) {
+        if(priceCategoryInt>1 && priceCategoryInt<=3){
+            this.priceCategoryInt=priceCategoryInt;
+        }
+    }
+
+    public float getStars() {
         return stars;
     }
 
-    public Restaurant(String name, int stars, String priceCategory) {
-        reviewList=new ArrayList<>();
-        this.name = name;
-        this.priceCategory = priceCategory;
+    public void setStars(float stars) {
         if(stars>0 && stars<=5){
             this.stars = stars;
         }
+    }
 
-
-
-
+    @Override
+    public void addReview(Review review) {
+        restaurantReviewList.add(review);
+        calculateStars();
     }
 
 
-    public void addReview(Review review){
-
-
-        boolean flag=false;
-
-        if(reviewList.size()==0){
-            reviewList.add(review);
-        }
-        for (Review rev
-                :reviewList) {
-            if(rev.getAuthor()==review.getAuthor()){
-                flag=true;
-            }
-        }
-
-        if(flag==true){
-            reviewList.add(review);
-
-        }else {
-            reviewList.add(review);
-            calculateStars(review.getStars());
-        }
-    }
-
-    public void calculateStars(int revStare){
-        int sumOfStars=0;
-        int stareAvg=0;
+    public void calculateStars(){
+        float sumOfStars=0;
+        float stareAvg=0;
         for (Review rev:
-                reviewList) {
+                restaurantReviewList) {
             sumOfStars=sumOfStars+rev.getStars();
         }
-        stareAvg=sumOfStars/reviewList.size();
-        setStars(stareAvg);
+        stareAvg=sumOfStars/restaurantReviewList.size();
+        setStars((float) Math.round(stareAvg*10)/10);
     }
 
     @Override
     public String toString() {
         return "Restaurant{" +
-                "name='" + name + '\'' +
-                ", stars=" + stars +
+                "name= "+ super.getName()+
                 ", priceCategory='" + priceCategory + '\'' +
-                ", reviewList=" + reviewList +
+                ", stars=" + stars +
+                ", restaurantReviewList=" + restaurantReviewList +
                 '}';
     }
 }
