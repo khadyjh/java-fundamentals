@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="basiclibrary.LibraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-27T19:09:02" hostname="DESKTOP-21OFTVH" time="0.023">
+<testsuite name="basiclibrary.LibraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-05T20:21:25" hostname="DESKTOP-21OFTVH" time="0.035">
   <properties/>
-  <testcase name="tally()" classname="basiclibrary.LibraryTest" time="0.023"/>
-  <system-out><![CDATA[Bush
-Bush
-Bush
-Shrub
-Hedge
-Shrub
-Bush
-Hedge
-Bush
-Bush is the winner
-{2=Hedge, 5=Bush}
+  <testcase name="weatherDataTest()" classname="basiclibrary.LibraryTest" time="0.035"/>
+  <system-out><![CDATA[the min number 51
+the min number 72
+Never saw temperature: 63
+Never saw temperature: 67
+Never saw temperature: 68
+Never saw temperature: 69
+
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,54 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="linter.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-27T20:34:49" hostname="DESKTOP-21OFTVH" time="0.037">
+<testsuite name="linter.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-05T19:50:05" hostname="DESKTOP-21OFTVH" time="0.029">
   <properties/>
-  <testcase name="readTest()" classname="linter.AppTest" time="0.037"/>
-  <system-out><![CDATA[ Missing semicolon in line => 3
- Missing semicolon in line => 5
- Missing semicolon in line => 11
- Missing semicolon in line => 13
- Missing semicolon in line => 15
- Missing semicolon in line => 26
- Missing semicolon in line => 28
- Missing semicolon in line => 32
- Missing semicolon in line => 36
- Missing semicolon in line => 40
- Missing semicolon in line => 41
- Missing semicolon in line => 50
- Missing semicolon in line => 51
- Missing semicolon in line => 59
- Missing semicolon in line => 60
- Missing semicolon in line => 61
- Missing semicolon in line => 62
- Missing semicolon in line => 64
- Missing semicolon in line => 70
- Missing semicolon in line => 71
- Missing semicolon in line => 72
- Missing semicolon in line => 73
- Missing semicolon in line => 74
- Missing semicolon in line => 76
- Missing semicolon in line => 77
- Missing semicolon in line => 78
- Missing semicolon in line => 79
- Missing semicolon in line => 80
- Missing semicolon in line => 82
- Missing semicolon in line => 83
- Missing semicolon in line => 84
- Missing semicolon in line => 85
- Missing semicolon in line => 86
- Missing semicolon in line => 88
- Missing semicolon in line => 89
- Missing semicolon in line => 90
- Missing semicolon in line => 91
- Missing semicolon in line => 92
- Missing semicolon in line => 94
- Missing semicolon in line => 95
- Missing semicolon in line => 96
- Missing semicolon in line => 97
- Missing semicolon in line => 98
- Missing semicolon in line => 99
- Missing semicolon in line => 100
- Missing semicolon in line => 101
-[ Missing semicolon in line => 88,  Missing semicolon in line => 89,  Missing semicolon in line => 40,  Missing semicolon in line => 62,  Missing semicolon in line => 84,  Missing semicolon in line => 61,  Missing semicolon in line => 83,  Missing semicolon in line => 3,  Missing semicolon in line => 64,  Missing semicolon in line => 86,  Missing semicolon in line => 41,  Missing semicolon in line => 85,  Missing semicolon in line => 26,  Missing semicolon in line => 28,  Missing semicolon in line => 5,  Missing semicolon in line => 91,  Missing semicolon in line => 90,  Missing semicolon in line => 71,  Missing semicolon in line => 70,  Missing semicolon in line => 92,  Missing semicolon in line => 11,  Missing semicolon in line => 77,  Missing semicolon in line => 99,  Missing semicolon in line => 32,  Missing semicolon in line => 76,  Missing semicolon in line => 98,  Missing semicolon in line => 13,  Missing semicolon in line => 79,  Missing semicolon in line => 78,  Missing semicolon in line => 51,  Missing semicolon in line => 73,  Missing semicolon in line => 95,  Missing semicolon in line => 50,  Missing semicolon in line => 72,  Missing semicolon in line => 94,  Missing semicolon in line => 97,  Missing semicolon in line => 74,  Missing semicolon in line => 96,  Missing semicolon in line => 15,  Missing semicolon in line => 59,  Missing semicolon in line => 36,  Missing semicolon in line => 80,  Missing semicolon in line => 100,  Missing semicolon in line => 101,  Missing semicolon in line => 60,  Missing semicolon in line => 82]
+  <testcase name="no Error" classname="linter.AppTest" time="0.029"/>
+  <system-out><![CDATA[[]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
